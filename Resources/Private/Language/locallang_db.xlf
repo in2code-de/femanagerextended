@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-06-30T10:52:26Z" product-name="femanagerextended">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_femanagerextended_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_femanagerextended_domain_model_user.twitter_id">
+				<source>Twitter Id</source>
+			</trans-unit>
+			<trans-unit id="tx_femanagerextended_domain_model_user.skype_id">
+				<source>Skype Id</source>
+			</trans-unit>
+			
+			<trans-unit id="fe_users.tx_extbase_type.Tx_Femanagerextended_User">
+				<source>femanagerextended User</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

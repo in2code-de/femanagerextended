@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-06-30T10:52:26Z" product-name="femanagerextended">
+		<header/>
+		<body>
+
+			<trans-unit id="twitter_id.description">
+				<source>twitterId</source>
+			</trans-unit>
+			<trans-unit id="skype_id.description">
+				<source>skypeId</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
