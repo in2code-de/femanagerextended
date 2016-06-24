@@ -1,25 +1,26 @@
 <?php
-namespace In2\Femanagerextended\Domain\Validator;
+namespace In2code\Femanagerextended\Domain\Validator;
 
-class CustomServersideValidator extends \In2\Femanager\Domain\Validator\ServersideValidator {
+use In2code\Femanager\Domain\Validator\ServersideValidator;
 
-	/**
-	 * Custom Validator
-	 * 		Activate via TypoScript - e.g. plugin.tx_femanager.settings.new.validation.username.custom = validationSetting
-	 *
-	 * @param \string $value Given value from input field
-	 * @param \string $validationSetting TypoScript Setting for this field
-	 * @return bool
-	 */
-	protected function validateCustom($value, $validationSetting) {
+class CustomServersideValidator extends ServersideValidator
+{
 
-		// check if string has string inside
-		if (stristr($value, $validationSetting)) {
-			return TRUE;
-		}
-		return FALSE;
-	}
-
+    /**
+     * Custom Validator
+     *      Activate via TypoScript
+     *      e.g. plugin.tx_femanager.settings.new.validation.username.custom = validationSetting
+     *
+     * @param \string $value Given value from input field
+     * @param \string $validationSetting TypoScript Setting for this field
+     * @return bool
+     */
+    protected function validateCustom($value, $validationSetting)
+    {
+        // check if string has string inside
+        if (stristr($value, $validationSetting)) {
+            return true;
+        }
+        return false;
+    }
 }
-
-?>

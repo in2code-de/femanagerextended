@@ -1,18 +1,21 @@
 <?php
-namespace In2\Femanagerextended\Controller;
+namespace In2code\Femanagerextended\Controller;
 
-class NewController extends \In2\Femanager\Controller\NewController {
+use In2code\Femanagerextended\Domain\Model\User;
 
-	/**
-	 * action create
-	 *
-	 * @param \In2\Femanagerextended\Domain\Model\User $user
-	 * @validate $user In2\Femanager\Domain\Validator\ServersideValidator
-	 * @validate $user In2\Femanager\Domain\Validator\PasswordValidator
-	 * @return void
-	 */
-	public function createAction(\In2\Femanagerextended\Domain\Model\User $user) {
-		parent::createAction($user);
-	}
+class NewController extends \In2code\Femanager\Controller\NewController
+{
+
+    /**
+     * action create
+     *
+     * @param User $user
+     * @validate $user In2code\Femanager\Domain\Validator\ServersideValidator
+     * @validate $user In2code\Femanager\Domain\Validator\PasswordValidator
+     * @return void
+     */
+    public function createAction(User $user)
+    {
+        parent::createAction($user);
+    }
 }
-?>

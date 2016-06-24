@@ -1,66 +1,72 @@
 <?php
-namespace In2\Femanagerextended\Domain\Model;
+namespace In2code\Femanagerextended\Domain\Model;
 
-class User extends \In2\Femanager\Domain\Model\User {
+use In2code\Femanager\Domain\Model\User as UserFemanager;
 
-	/**
-	 * twitterId
-	 *
-	 * @var \string
-	 */
-	protected $twitterId;
+class User extends UserFemanager
+{
 
-	/**
-	 * skypeId
-	 *
-	 * @var \string
-	 */
-	protected $skypeId;
+    /**
+     * twitterId
+     *
+     * @var string
+     */
+    protected $twitterId;
 
-	/**
-	 * Returns the twitterId
-	 *
-	 * @return \string $twitterId
-	 */
-	public function getTwitterId() {
-		return $this->twitterId;
-	}
+    /**
+     * skypeId
+     *
+     * @var string
+     */
+    protected $skypeId;
 
-	/**
-	 * Sets the twitterId
-	 *
-	 * @param \string $twitterId
-	 * @return void
-	 */
-	public function setTwitterId($twitterId) {
-		$this->twitterId = $twitterId;
-	}
+    /**
+     * Returns the twitterId
+     *
+     * @return string $twitterId
+     */
+    public function getTwitterId()
+    {
+        return $this->twitterId;
+    }
 
-	/**
-	 * Returns the skypeId
-	 *
-	 * @return \string $skypeId
-	 */
-	public function getSkypeId() {
-		return $this->skypeId;
-	}
+    /**
+     * Sets the twitterId
+     *
+     * @param string $twitterId
+     * @return void
+     */
+    public function setTwitterId($twitterId)
+    {
+        $this->twitterId = $twitterId;
+    }
 
-	/**
-	 * Sets the skypeId
-	 *
-	 * @param \string $skypeId
-	 * @return void
-	 */
-	public function setSkypeId($skypeId) {
-		$this->skypeId = $skypeId;
-	}
+    /**
+     * Returns the skypeId
+     *
+     * @return string $skypeId
+     */
+    public function getSkypeId()
+    {
+        return $this->skypeId;
+    }
 
-	/**
-	 * @param string $username
-	 */
-	public function setUsername($username) {
-		$this->username = $username;
-	}
+    /**
+     * Sets the skypeId
+     *
+     * @param string $skypeId
+     * @return void
+     */
+    public function setSkypeId($skypeId)
+    {
+        $this->skypeId = $skypeId;
+    }
 
+    /**
+     * @param string $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
 }
-?>

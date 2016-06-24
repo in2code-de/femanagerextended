@@ -1,18 +1,27 @@
 <?php
-namespace In2\Femanagerextended\Controller;
+namespace In2code\Femanagerextended\Controller;
 
-class EditController extends \In2\Femanager\Controller\EditController {
+use In2code\Femanager\Controller\EditController as EditControllerFemanager;
+use In2code\Femanagerextended\Domain\Model\User;
 
-	/**
-	 * action update
-	 *
-	 * @param \In2\Femanagerextended\Domain\Model\User $user
-	 * @validate $user In2\Femanager\Domain\Validator\ServersideValidator
-	 * @validate $user In2\Femanager\Domain\Validator\PasswordValidator
-	 * @return void
-	 */
-	public function updateAction(\In2\Femanagerextended\Domain\Model\User $user) {
-		parent::updateAction($user);
-	}
+/**
+ * Class EditController
+ *
+ * @package In2code\Femanagerextended\Controller
+ */
+class EditController extends EditControllerFemanager
+{
+
+    /**
+     * action update
+     *
+     * @param User $user
+     * @validate $user In2code\Femanager\Domain\Validator\ServersideValidator
+     * @validate $user In2code\Femanager\Domain\Validator\PasswordValidator
+     * @return void
+     */
+    public function updateAction(User $user)
+    {
+        parent::updateAction($user);
+    }
 }
-?>
