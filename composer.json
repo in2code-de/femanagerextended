@@ -1,0 +1,23 @@
+{
+  "name": "in2code/femanagerextended",
+  "description": "Example addon extension to TYPO3 extension femanager",
+  "version": "1.0.1",
+  "keywords": ["typo3", "form", "femanager", "fe_users", "registration"],
+  "homepage": "https://forge.typo3.org/projects/extension-femanager",
+  "authors": [
+    {
+      "name": "Alex Kellner",
+      "email": "alexander.kellner@in2code.de"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "license": "GPL-3.0",
+  "require": {
+    "typo3/cms": ">=7.6.0 <9.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "In2code\\Femanagerextended\\": "Classes"
+    }
+  }
+}
