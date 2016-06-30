@@ -1,7 +1,7 @@
 {
   "name": "in2code/femanagerextended",
   "description": "Example addon extension to TYPO3 extension femanager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": ["typo3", "form", "femanager", "fe_users", "registration"],
   "homepage": "https://forge.typo3.org/projects/extension-femanager",
   "authors": [
