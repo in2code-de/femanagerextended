@@ -22,3 +22,11 @@ config.tx_extbase{
 		In2code\Femanager\Domain\Validator\ClientsideValidator.className = In2code\Femanagerextended\Domain\Validator\CustomClientsideValidator
 	}
 }
+
+plugin.tx_femanager {
+	view {
+		partialRootPaths {
+			1 = EXT:femanagerextended/Resources/Private/Partials/
+		}
+	}
+}

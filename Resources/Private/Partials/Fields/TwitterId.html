@@ -1,0 +1,13 @@
+{namespace femanager=In2code\Femanager\ViewHelpers}
+<div class="femanager_fieldset control-group">
+	<label for="twitterId" class="control-label">
+		<f:translate key="tx_femanagerextended_domain_model_user.twitter_id" extensionName="femanagerextended">Twitter</f:translate>
+	</label>
+	<div class="controls">
+		<femanager:form.textfield
+				id="twitterId"
+				property="twitterId"
+				class="input-block-level"
+				additionalAttributes="{femanager:Validation.FormValidationData(settings:settings,fieldName:'twitterId')}" />
+	</div>
+</div>
