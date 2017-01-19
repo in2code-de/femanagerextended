@@ -26,7 +26,7 @@ config.tx_extbase{
 plugin.tx_femanager {
 	view {
 		partialRootPaths {
-			1 = EXT:femanagerextended/Resources/Private/Partials/
+			2 = EXT:femanagerextended/Resources/Private/Partials/
 		}
 	}
 }
