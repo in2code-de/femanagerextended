@@ -12,6 +12,18 @@ use In2code\Femanagerextended\Domain\Model\User;
 class EditController extends EditControllerFemanager
 {
 
+        /**
+     * Initialize update action for setting the right custom data type for the user.
+     */
+    public function initializeCreateAction() {
+        if ($this->arguments->hasArgument('user')) {
+            // Workaround to avoid php7 warnings of wrong type hint.
+            /** @var \In2code\Femanagerextended\Xclass\Extbase\Mvc\Controller\Argument $user */
+            $user = $this->arguments['user'];
+            $user->setDataType(\In2code\Femanagerextended\Domain\Model\User::class);
+        }
+    }
+    
     /**
      * action update
      *
@@ -20,7 +32,7 @@ class EditController extends EditControllerFemanager
      * @validate $user In2code\Femanager\Domain\Validator\PasswordValidator
      * @return void
      */
-    public function updateAction(User $user)
+    public function updateAction(\In2code\Femanager\Domain\Model\User $user)
     {
         parent::updateAction($user);
     }
