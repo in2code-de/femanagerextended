@@ -15,7 +15,7 @@ class EditController extends EditControllerFemanager
         /**
      * Initialize update action for setting the right custom data type for the user.
      */
-    public function initializeCreateAction() {
+    public function initializeUpdateAction() {
         if ($this->arguments->hasArgument('user')) {
             // Workaround to avoid php7 warnings of wrong type hint.
             /** @var \In2code\Femanagerextended\Xclass\Extbase\Mvc\Controller\Argument $user */
