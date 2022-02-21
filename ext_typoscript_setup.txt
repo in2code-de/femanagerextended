@@ -1,32 +1,20 @@
-config.tx_extbase{
-	persistence{
-		classes{
-			In2code\Femanager\Domain\Model\User {
-				subclasses {
-					0 = In2code\Femanagerextended\Domain\Model\User
-				}
-			}
-			In2code\Femanagerextended\Domain\Model\User {
-				mapping {
-					tableName = fe_users
-					recordType = 0
-				}
-			}
-		}
-	}
-	objects {
-		In2code\Femanager\Controller\NewController.className = In2code\Femanagerextended\Controller\NewController
-		In2code\Femanager\Controller\EditController.className = In2code\Femanagerextended\Controller\EditController
-
-		In2code\Femanager\Domain\Validator\ServersideValidator.className = In2code\Femanagerextended\Domain\Validator\CustomServersideValidator
-		In2code\Femanager\Domain\Validator\ClientsideValidator.className = In2code\Femanagerextended\Domain\Validator\CustomClientsideValidator
-	}
-}
-
 plugin.tx_femanager {
-	view {
-		partialRootPaths {
-			1 = EXT:femanagerextended/Resources/Private/Partials/
-		}
-	}
+  view {
+    partialRootPaths {
+      1 = EXT:femanagerextended/Resources/Private/Partials/
+    }
+  }
+  _LOCAL_LANG {
+    default.validationErrorCustom = "in2code" is missing
+    de.validationErrorCustom = "in2code" wird erwartet
+  }
+  settings {
+    new.validation {
+      skypeId.required = 1
+      twitterId.required = 0
+
+      # If set username string must include "in2code"
+      username.custom = in2code
+    }
+  }
 }
