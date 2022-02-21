@@ -30,8 +30,8 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.1.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.21-11.5.5',
-            'femanager' => '6.3.2'
+            'typo3' => '10.4.0-10.4.99',
+            'femanager' => '6.3.2',
         ],
     ],
 ];
