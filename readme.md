@@ -2,6 +2,7 @@
 
 # Changelog
 
+- 2.0.0 Add compatibility for TYPO3 v10
 - 1.1.0 Add missing configuration for TwitterId and SkypeId fields
 - 1.0.2 Updated dependencies
 - 1.0.1 Composer.json added
