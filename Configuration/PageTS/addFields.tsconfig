@@ -1,0 +1,3 @@
+tx_femanager.flexForm.new.addFieldOptions.twitterId = Twitter ID
+tx_femanager.flexForm.new.addFieldOptions.skypeId = Skype ID
+tx_femanager.flexForm.edit < tx_femanager.flexForm.new
