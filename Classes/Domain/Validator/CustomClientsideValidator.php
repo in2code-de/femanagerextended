@@ -15,7 +15,7 @@ class CustomClientsideValidator extends ClientsideValidator
      * @param \string $validationSetting TypoScript Setting for this field
      * @return bool
      */
-    protected function validateCustom($value, $validationSetting)
+    protected function validateCustom($value, $validationSetting): bool
     {
         // check if string has string inside
         if (stristr($value, $validationSetting)) {
