@@ -1,0 +1,14 @@
+{namespace femanager=In2code\Femanager\ViewHelpers}
+<div class="femanager_fieldset femanager_examplemodel form-group">
+	<label for="femanager_field_examplemodel" class="col-sm-2 control-label">
+		Example model (no need to change any data).
+        Suspected: In2code\Femanager\Utility\ObjectUtility::implodeObjectStorageOnProperty(): Argument #1 ($objectStorage) must be of type TYPO3\CMS\Extbase\Persistence\ObjectStorage, In2code\Femanagerextended\Domain\Model\ExampleModel given, called in /var/www/html/public/typo3conf/ext/femanager/Classes/Utility/UserUtility.php on line 263
+	</label>
+	<div class="col-sm-10">
+		<femanager:form.textfield
+				id="femanager_field_examplemodel"
+				property="exampleModel"
+				class="form-control"
+				additionalAttributes="{femanager:Validation.FormValidationData(settings:settings,fieldName:'exampleModel')}" />
+	</div>
+</div>
