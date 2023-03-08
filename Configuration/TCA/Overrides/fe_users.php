@@ -30,7 +30,22 @@
                 'default' => '0',
             ],
         ],
+        'example_model' => [
+            'label' => 'Example model',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'None',
+                        0
+                    ]
+                ],
+                'foreign_table' => 'tx_femanagerextended_domain_model_examplemodel',
+                'default' => 0
+            ]
+        ],
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $tmpFeUsersColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id, example_model');

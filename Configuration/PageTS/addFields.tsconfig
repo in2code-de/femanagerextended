@@ -1,5 +1,6 @@
 tx_femanager.flexForm.new.addFieldOptions {
   twitterId = Twitter ID
   skypeId = Skype ID
+  exampleModel = ExampleModel
 }
 tx_femanager.flexForm.edit < tx_femanager.flexForm.new

@@ -18,6 +18,9 @@ class User extends \In2code\Femanager\Domain\Model\User
      */
     protected $skypeId;
 
+    /** @var ExampleModel|null $exampleModel */
+    protected ?ExampleModel $exampleModel = null;
+
     /**
      * Returns the twitterId
      *
@@ -58,5 +61,21 @@ class User extends \In2code\Femanager\Domain\Model\User
     public function setSkypeId($skypeId): void
     {
         $this->skypeId = $skypeId;
+    }
+
+    /**
+     * @return ExampleModel|null
+     */
+    public function getExampleModel(): ?ExampleModel
+    {
+        return $this->exampleModel;
+    }
+
+    /**
+     * @param ExampleModel|null $exampleModel
+     */
+    public function setExampleModel(?ExampleModel $exampleModel): void
+    {
+        $this->exampleModel = $exampleModel;
     }
 }
