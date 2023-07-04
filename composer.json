@@ -1,7 +1,6 @@
 {
   "name": "in2code/femanagerextended",
   "description": "Example addon extension to TYPO3 extension femanager",
-  "version": "3.0.0",
   "keywords": [
     "typo3",
     "form",
@@ -19,7 +18,8 @@
   "type": "typo3-cms-extension",
   "license": "GPL-3.0",
   "require": {
-    "typo3/cms-core": "^11.5"
+    "typo3/cms-core": "^12.4",
+    "in2code/femanager": "^8.0 || dev-main || dev-develop || dev-eap"
   },
   "autoload": {
     "psr-4": {
@@ -28,5 +28,10 @@
   },
   "scripts": {
     "test:php:lint": "find *.php Classes Configuration Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "femanagerextended"
+    }
   }
 }
