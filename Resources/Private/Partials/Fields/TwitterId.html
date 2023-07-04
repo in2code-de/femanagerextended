@@ -1,16 +1,17 @@
-{namespace femanager=In2code\Femanager\ViewHelpers}
-<div class="femanager_fieldset femanager_twitterid form-group">
-	<label for="femanager_field_twitterid" class="col-sm-2 control-label">
-		<f:translate key="tx_femanagerextended_domain_model_user.twitter_id" extensionName="femanagerextended" />
-		<f:if condition="{femanager:Validation.IsRequiredField(fieldName:'twitterId')}">
-			<span>*</span>
-		</f:if>
-	</label>
-	<div class="col-sm-10">
-		<femanager:form.textfield
-				id="femanager_field_twitterid"
-				property="twitterId"
-				class="form-control"
-				additionalAttributes="{femanager:Validation.FormValidationData(settings:settings,fieldName:'twitterId')}" />
+<html xmlns:femanager="http://typo3.org/ns/In2code/Femanager/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="femanager_fieldset femanager_twitterid form-group">
+		<label for="femanager_field_twitterid" class="col-sm-2 control-label">
+			<f:translate key="tx_femanagerextended_domain_model_user.twitter_id" extensionName="femanagerextended" />
+			<f:if condition="{femanager:Validation.IsRequiredField(fieldName:'twitterId')}">
+				<span>*</span>
+			</f:if>
+		</label>
+		<div class="col-sm-10">
+			<femanager:form.textfield
+					id="femanager_field_twitterid"
+					property="twitterId"
+					class="form-control"
+					additionalAttributes="{femanager:Validation.FormValidationData(settings:settings,fieldName:'twitterId')}" />
+		</div>
 	</div>
-</div>
+</html>

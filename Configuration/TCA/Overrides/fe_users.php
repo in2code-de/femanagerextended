@@ -2,7 +2,10 @@
 /**
  * Add new fields to fe_users table
  */
-    $GLOBALS['TCA']['fe_users']['ctrl']['type'] = 'tx_extbase_type';
+
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+$GLOBALS['TCA']['fe_users']['ctrl']['type'] = 'tx_extbase_type';
     $tmpFeUsersColumns = [
         'twitter_id' => [
             'exclude' => 1,
@@ -46,5 +49,5 @@
         ],
     ];
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $tmpFeUsersColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id, user_categories');
+    ExtensionManagementUtility::addTCAcolumns('fe_users', $tmpFeUsersColumns);
+    ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id');

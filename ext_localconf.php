@@ -1,31 +1,29 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
 
-/**
- * Add page TSConfig for the two new fields
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('@import "EXT:femanagerextended/Configuration/PageTS/addFields.tsconfig"');
+declare(strict_types=1);
+
+use In2code\Femanager\Domain\Validator\ServersideValidator;
+use In2code\Femanagerextended\Domain\Validator\CustomServersideValidator;
+use In2code\Femanager\Domain\Validator\ClientsideValidator;
+use In2code\Femanagerextended\Domain\Validator\CustomClientsideValidator;
+use In2code\Femanager\Domain\Model\User as FemanagerUser;
+use In2code\Femanagerextended\Domain\Model\User;
+
+defined('TYPO3') or die();
 
 /**
  * Add custom validators
  */
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Femanager\Domain\Validator\ServersideValidator::class] = [
-    'className' => \In2code\Femanagerextended\Domain\Validator\CustomServersideValidator::class,
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][ServersideValidator::class] = [
+    'className' => CustomServersideValidator::class,
 ];
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Femanager\Domain\Validator\ClientsideValidator::class] = [
-    'className' => \In2code\Femanagerextended\Domain\Validator\CustomClientsideValidator::class,
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][ClientsideValidator::class] = [
+    'className' => CustomClientsideValidator::class,
 ];
 
 /**
  * Override femanager User model with own
  */
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Femanager\Domain\Model\User::class] = [
-    'className' => \In2code\Femanagerextended\Domain\Model\User::class,
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FemanagerUser::class] = [
+    'className' => User::class,
 ];
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\Container\Container::class)
-    ->registerImplementation(
-        \In2code\Femanager\Domain\Model\User::class,
-        \In2code\Femanagerextended\Domain\Model\User::class
-    );

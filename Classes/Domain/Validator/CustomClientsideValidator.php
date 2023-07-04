@@ -11,11 +11,11 @@ class CustomClientsideValidator extends ClientsideValidator
      *      Activate via TypoScript
      *      e.g. plugin.tx_femanager.settings.new.validation.username.custom = validationSetting
      *
-     * @param \string $value Given value from input field
-     * @param \string $validationSetting TypoScript Setting for this field
+     * @param string $value Given value from input field
+     * @param string $validationSetting TypoScript Setting for this field
      * @return bool
      */
-    protected function validateCustom($value, $validationSetting): bool
+    protected function validateCustom(string $value, string $validationSetting): bool
     {
         // check if string has string inside
         if (stristr($value, $validationSetting)) {
