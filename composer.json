@@ -13,6 +13,10 @@
     {
       "name": "Alex Kellner",
       "email": "alexander.kellner@in2code.de"
+    },
+    {
+      "name": "Daniel Hoffmann",
+      "email": "daniel.hoffmann@in2code.de"
     }
   ],
   "type": "typo3-cms-extension",

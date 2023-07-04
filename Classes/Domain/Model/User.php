@@ -1,7 +1,12 @@
 <?php
+
+declare(strict_types=1);
+
 namespace In2code\Femanagerextended\Domain\Model;
 
-class User extends \In2code\Femanager\Domain\Model\User
+use In2code\Femanager\Domain\Model\User as FemanageUser;
+
+class User extends FemanageUser
 {
 
     /**
@@ -9,14 +14,14 @@ class User extends \In2code\Femanager\Domain\Model\User
      *
      * @var string
      */
-    protected $twitterId;
+    protected string $twitterId;
 
     /**
      * skypeId
      *
      * @var string
      */
-    protected $skypeId;
+    protected string $skypeId;
 
     /**
      * Returns the twitterId
@@ -34,7 +39,7 @@ class User extends \In2code\Femanager\Domain\Model\User
      * @param string $twitterId
      * @return void
      */
-    public function setTwitterId($twitterId): void
+    public function setTwitterId(string $twitterId): void
     {
         $this->twitterId = $twitterId;
     }
@@ -55,7 +60,7 @@ class User extends \In2code\Femanager\Domain\Model\User
      * @param string $skypeId
      * @return void
      */
-    public function setSkypeId($skypeId): void
+    public function setSkypeId(string $skypeId): void
     {
         $this->skypeId = $skypeId;
     }

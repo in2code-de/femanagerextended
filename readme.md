@@ -2,6 +2,7 @@
 
 # Changelog
 
+- 4.0.0 Add compatibility for TYPO3 v12
 - 3.0.0 Add compatibility for TYPO3 v11
 - 2.0.0 Add compatibility for TYPO3 v10
 - 1.1.0 Add missing configuration for TwitterId and SkypeId fields
