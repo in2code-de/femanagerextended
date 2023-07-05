@@ -16,3 +16,7 @@
 * add new fields twitter and skype as example to extend with new fields
 * add example for objectstorage
 
+# Extension Development
+
+The best way to work on this extension is to use the Developmentenvironment of in2code/femanager.
+After starting up, you can simply install the extension with the command `ddev composer req --dev in2code/femanagerextended:@dev` and commit from the repository in the directory `packages/femanagerextended`
