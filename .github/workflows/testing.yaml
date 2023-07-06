@@ -30,4 +30,4 @@ jobs:
       - name: "Run TypoScript lint"
         uses: TYPO3-Continuous-Integration/TYPO3-CI-Typoscript-Lint@v1
         with:
-          config_file: ".project/tests/typoscript-lint.yml"
+          config_file: ".project/tests/typoscript-lint.yaml"
