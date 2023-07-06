@@ -13,6 +13,9 @@
 			<trans-unit id="tx_femanagerextended_domain_model_user.skype_id">
 				<source>skypeId</source>
 			</trans-unit>
+			<trans-unit id="tx_femanagerextended_domain_model_user.user_categories">
+				<source>User Categories</source>
+			</trans-unit>
 			
 		</body>
 	</file>

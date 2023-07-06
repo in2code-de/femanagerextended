@@ -13,11 +13,15 @@
 			<trans-unit id="tx_femanagerextended_domain_model_user.skype_id">
 				<source>Skype Id</source>
 			</trans-unit>
-			
+			<trans-unit id="tx_femanagerextended_domain_model_user.user_categories">
+				<source>User Categories</source>
+			</trans-unit>
+
+
 			<trans-unit id="fe_users.tx_extbase_type.Tx_Femanagerextended_User">
 				<source>femanagerextended User</source>
 			</trans-unit>
-			
+
 		</body>
 	</file>
 </xliff>

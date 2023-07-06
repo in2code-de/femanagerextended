@@ -24,6 +24,20 @@
                 'eval' => 'trim',
             ],
         ],
+        'user_categories' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:femanagerextended/Resources/Private/Language/locallang_db.xlf:' .
+                'tx_femanagerextended_domain_model_user.user_categories',
+            'config' => [
+                'type' => 'category',
+                'relationship' => 'oneToMany',
+                'treeConfig' => [
+                    'startingPoints' => 1,
+                ],
+                'minitems' => 0,
+                'maxitems' => 99,
+            ]
+        ],
         'tx_extbase_type' => [
             'config' => [
                 'type' => 'input',
@@ -33,4 +47,4 @@
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('fe_users', $tmpFeUsersColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id, user_categories');

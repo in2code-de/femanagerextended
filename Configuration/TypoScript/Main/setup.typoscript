@@ -9,6 +9,7 @@ plugin.tx_femanager {
     de.validationErrorCustom = "in2code" wird erwartet
   }
   settings {
+    userCategoriesRoot = 1
     new.validation {
       skypeId.required = 1
       twitterId.required = 0

@@ -1,5 +1,11 @@
 <?php
+
+declare(strict_types=1);
+
 namespace In2code\Femanagerextended\Domain\Model;
+
+use TYPO3\CMS\Extbase\Domain\Model\Category;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class User extends \In2code\Femanager\Domain\Model\User
 {
@@ -9,14 +15,26 @@ class User extends \In2code\Femanager\Domain\Model\User
      *
      * @var string
      */
-    protected $twitterId;
+    protected string $twitterId;
 
     /**
      * skypeId
      *
      * @var string
      */
-    protected $skypeId;
+    protected string $skypeId;
+
+    /**
+     * @var ObjectStorage<Category>
+     */
+    protected ObjectStorage $userCategories;
+
+    public function __construct($username = '', $password = '')
+    {
+        parent::__construct($username, $password);
+        $this->userCategories = new ObjectStorage();
+    }
+
 
     /**
      * Returns the twitterId
@@ -34,7 +52,7 @@ class User extends \In2code\Femanager\Domain\Model\User
      * @param string $twitterId
      * @return void
      */
-    public function setTwitterId($twitterId): void
+    public function setTwitterId(string $twitterId): void
     {
         $this->twitterId = $twitterId;
     }
@@ -55,8 +73,42 @@ class User extends \In2code\Femanager\Domain\Model\User
      * @param string $skypeId
      * @return void
      */
-    public function setSkypeId($skypeId): void
+    public function setSkypeId(string $skypeId): void
     {
         $this->skypeId = $skypeId;
+    }
+
+    /**
+     * @return ObjectStorage
+     */
+    public function getUserCategories(): ObjectStorage
+    {
+        return $this->userCategories;
+    }
+
+    /**
+     * @param ObjectStorage $userCategories
+     */
+    public function setUserCategories(ObjectStorage $userCategories): void
+    {
+        $this->userCategories = $userCategories;
+    }
+
+    /**
+     * @param Category $category
+     * @return void
+     */
+    public function addUserCategory(Category $category)
+    {
+        $this->userCategories->attach($category);
+    }
+
+    /**
+     * @param Category $category
+     * @return void
+     */
+    public function removeUserCategory(Category $category)
+    {
+        $this->userCategories->detach($category);
     }
 }
