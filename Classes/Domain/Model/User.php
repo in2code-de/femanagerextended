@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace In2code\Femanagerextended\Domain\Model;
 
-use In2code\Femanager\Domain\Model\User as FemanageUser;
+use In2code\Femanager\Domain\Model\User as FemanagerUser;
 
-class User extends FemanageUser
+class User extends FemanagerUser
 {
 
     /**
