@@ -27,3 +27,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][ClientsideValidator::class] = [
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][FemanagerUser::class] = [
     'className' => User::class,
 ];
+
+// Add custom controller via XCLASS
+//$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Femanager\Controller\NewController::class] = [
+//    'className' => \In2code\Femanagerextended\Controller\NewController::class,
+//];
