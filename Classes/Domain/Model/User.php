@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace In2code\Femanagerextended\Domain\Model;
 
+use TYPO3\CMS\Extbase\Domain\Model\Category;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use In2code\Femanager\Domain\Model\User as FemanagerUser;
 
 class User extends FemanagerUser
