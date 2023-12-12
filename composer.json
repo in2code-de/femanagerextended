@@ -22,7 +22,6 @@
   "type": "typo3-cms-extension",
   "license": "GPL-3.0",
   "require": {
-    "typo3/cms-core": "^12.4",
     "in2code/femanager": "^8.0 || dev-main || dev-develop || dev-eap"
   },
   "autoload": {
