@@ -50,4 +50,4 @@ $GLOBALS['TCA']['fe_users']['ctrl']['type'] = 'tx_extbase_type';
     ];
 
     ExtensionManagementUtility::addTCAcolumns('fe_users', $tmpFeUsersColumns);
-    ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id');
+    ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'twitter_id, skype_id, user_categories');
