@@ -8,7 +8,7 @@
     "fe_users",
     "registration"
   ],
-  "homepage": "https://forge.typo3.org/projects/extension-femanager",
+  "homepage": "https://github.com/in2code-de/femanagerextended",
   "authors": [
     {
       "name": "Alex Kellner",
@@ -22,7 +22,7 @@
   "type": "typo3-cms-extension",
   "license": "GPL-3.0",
   "require": {
-    "in2code/femanager": "^8.0 || dev-main || dev-develop || dev-eap"
+    "in2code/femanager": "^8.0 || dev-main || dev-develop || dev-eap || dev-eap-v12"
   },
   "autoload": {
     "psr-4": {
