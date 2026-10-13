@@ -2,6 +2,7 @@ tx_femanager.flexForm {
   new.addFieldOptions {
     twitterId = Twitter ID
     skypeId = Skype ID
+    userCategories = User categories
   }
   edit < .new
 }

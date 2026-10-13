@@ -4,10 +4,10 @@ on: [push, pull_request]
 jobs:
   php-lint:
     name: "PHP linter"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: "Install PHP"
         uses: shivammathur/setup-php@v2
         with:
@@ -20,13 +20,15 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-          - 8.1
+          - 8.2
+          - 8.3
+          - 8.4
   typoscript-lint:
     name: "TypoScript linter"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: "Run TypoScript lint"
         uses: TYPO3-Continuous-Integration/TYPO3-CI-Typoscript-Lint@v1
         with:

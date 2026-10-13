@@ -4,83 +4,57 @@ declare(strict_types=1);
 
 namespace In2code\Femanagerextended\Domain\Model;
 
+use In2code\Femanager\Domain\Model\User as FemanagerUser;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
-use In2code\Femanager\Domain\Model\User as FemanagerUser;
 
 class User extends FemanagerUser
 {
+    protected string $twitterId = '';
 
-    /**
-     * twitterId
-     *
-     * @var string
-     */
-    protected string $twitterId;
-
-    /**
-     * skypeId
-     *
-     * @var string
-     */
-    protected string $skypeId;
+    protected string $skypeId = '';
 
     /**
      * @var ObjectStorage<Category>
      */
     protected ObjectStorage $userCategories;
 
-    public function __construct($username = '', $password = '')
+    public function __construct(string $username = '', string $password = '')
     {
         parent::__construct($username, $password);
+        $this->initializeObject();
+    }
+
+    /**
+     * Extbase does not call the constructor when objects are reconstituted from the database
+     */
+    public function initializeObject(): void
+    {
         $this->userCategories = new ObjectStorage();
     }
 
-
-    /**
-     * Returns the twitterId
-     *
-     * @return string $twitterId
-     */
     public function getTwitterId(): string
     {
         return $this->twitterId;
     }
 
-    /**
-     * Sets the twitterId
-     *
-     * @param string $twitterId
-     * @return void
-     */
     public function setTwitterId(string $twitterId): void
     {
         $this->twitterId = $twitterId;
     }
 
-    /**
-     * Returns the skypeId
-     *
-     * @return string $skypeId
-     */
     public function getSkypeId(): string
     {
         return $this->skypeId;
     }
 
-    /**
-     * Sets the skypeId
-     *
-     * @param string $skypeId
-     * @return void
-     */
     public function setSkypeId(string $skypeId): void
     {
         $this->skypeId = $skypeId;
     }
 
     /**
-     * @return ObjectStorage
+     * @return ObjectStorage<Category>
      */
     public function getUserCategories(): ObjectStorage
     {
@@ -88,27 +62,19 @@ class User extends FemanagerUser
     }
 
     /**
-     * @param ObjectStorage $userCategories
+     * @param ObjectStorage<Category> $userCategories
      */
     public function setUserCategories(ObjectStorage $userCategories): void
     {
         $this->userCategories = $userCategories;
     }
 
-    /**
-     * @param Category $category
-     * @return void
-     */
-    public function addUserCategory(Category $category)
+    public function addUserCategory(Category $category): void
     {
         $this->userCategories->attach($category);
     }
 
-    /**
-     * @param Category $category
-     * @return void
-     */
-    public function removeUserCategory(Category $category)
+    public function removeUserCategory(Category $category): void
     {
         $this->userCategories->detach($category);
     }

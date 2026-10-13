@@ -1,11 +1,13 @@
 <?php
+
+declare(strict_types=1);
+
 namespace In2code\Femanagerextended\Domain\Validator;
 
 use In2code\Femanager\Domain\Validator\ServersideValidator;
 
 class CustomServersideValidator extends ServersideValidator
 {
-
     /**
      * Custom Validator
      *      Activate via TypoScript
@@ -13,14 +15,10 @@ class CustomServersideValidator extends ServersideValidator
      *
      * @param string $value Given value from input field
      * @param string $validationSetting TypoScript Setting for this field
-     * @return bool
      */
     protected function validateCustom(string $value, string $validationSetting): bool
     {
         // check if string has string inside
-        if (stristr($value, $validationSetting)) {
-            return true;
-        }
-        return false;
+        return stripos($value, $validationSetting) !== false;
     }
 }

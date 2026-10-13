@@ -2,6 +2,7 @@
 
 # Changelog
 
+- 13.0.0 Add compatibility for TYPO3 v13 and femanager v13, add ddev environment for local development
 - 4.0.0 Add compatibility for TYPO3 v12
 - 3.0.0 Add compatibility for TYPO3 v11
 - 2.0.0 Add compatibility for TYPO3 v10
@@ -19,7 +20,7 @@
 # Extension Development
 
 The extension comes with its own local development environment based on [ddev](https://ddev.com/)
-(TYPO3 12 with femanager 8 and some test pages).
+(TYPO3 13 with femanager 13 and some test pages).
 
 ## Requirements
 
@@ -34,4 +35,4 @@ The extension comes with its own local development environment based on [ddev](h
 4. Open https://femanagerextended.ddev.site/ (frontend) or https://femanagerextended.ddev.site/typo3/ (backend)
 
 The page https://femanagerextended.ddev.site/femanagerextended contains a registration form with the additional fields of
-this extension (twitterId, skypeId).
+this extension (twitterId, skypeId, userCategories).

@@ -44,6 +44,7 @@ return [
             'disableModule' => '0',
             'enableConfirmationModule' => '0',
             'overrideFeUserCountryFieldWithSelect' => '0',
+            'useFluidMail' => '0',
         ],
     ],
     'FE' => [
