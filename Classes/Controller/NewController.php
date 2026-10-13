@@ -10,7 +10,7 @@ use In2code\Femanager\Domain\Validator\CaptchaValidator;
 use In2code\Femanager\Domain\Validator\PasswordValidator;
 use In2code\Femanager\Domain\Validator\ServersideValidator;
 use Psr\Http\Message\ResponseInterface;
-use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Attribute\Validate;
 
 /**
  * Example for an own controller - activate it via XCLASS in ext_localconf.php
@@ -22,7 +22,7 @@ class NewController extends FemanagerNewController
     #[Validate(['validator' => ServersideValidator::class, 'param' => 'user'])]
     #[Validate(['validator' => PasswordValidator::class, 'param' => 'user'])]
     #[Validate(['validator' => CaptchaValidator::class, 'param' => 'captcha'])]
-    public function createAction(User $user, ?string $captcha = null): ResponseInterface
+    public function createAction(User $user, string $captcha = ''): ResponseInterface
     {
         return parent::createAction($user, $captcha);
     }

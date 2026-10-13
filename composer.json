@@ -23,29 +23,35 @@
   "license": "GPL-3.0",
   "require": {
     "php": "^8.2",
-    "in2code/femanager": "^13.3",
-    "typo3/cms-core": "^13.4"
+    "in2code/femanager": "^14.0",
+    "typo3/cms-core": "^14.3"
   },
   "require-dev": {
-    "helhum/typo3-console": "^8.2",
-    "typo3/cms-adminpanel": "^13.4",
-    "typo3/cms-backend": "^13.4",
-    "typo3/cms-belog": "^13.4",
-    "typo3/cms-beuser": "^13.4",
-    "typo3/cms-extbase": "^13.4",
-    "typo3/cms-extensionmanager": "^13.4",
-    "typo3/cms-felogin": "^13.4",
-    "typo3/cms-filelist": "^13.4",
-    "typo3/cms-fluid": "^13.4",
-    "typo3/cms-fluid-styled-content": "^13.4",
-    "typo3/cms-frontend": "^13.4",
-    "typo3/cms-info": "^13.4",
-    "typo3/cms-install": "^13.4",
-    "typo3/cms-lowlevel": "^13.4",
-    "typo3/cms-rte-ckeditor": "^13.4",
-    "typo3/cms-setup": "^13.4",
-    "typo3/cms-tstemplate": "^13.4"
+    "helhum/typo3-console": "^8.3",
+    "typo3/cms-adminpanel": "^14.3",
+    "typo3/cms-backend": "^14.3",
+    "typo3/cms-belog": "^14.3",
+    "typo3/cms-beuser": "^14.3",
+    "typo3/cms-extbase": "^14.3",
+    "typo3/cms-extensionmanager": "^14.3",
+    "typo3/cms-felogin": "^14.3",
+    "typo3/cms-filelist": "^14.3",
+    "typo3/cms-fluid": "^14.3",
+    "typo3/cms-fluid-styled-content": "^14.3",
+    "typo3/cms-frontend": "^14.3",
+    "typo3/cms-info": "^14.3",
+    "typo3/cms-install": "^14.3",
+    "typo3/cms-lowlevel": "^14.3",
+    "typo3/cms-rte-ckeditor": "^14.3",
+    "typo3/cms-setup": "^14.3",
+    "typo3/cms-tstemplate": "^14.3"
   },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:in2code-pro/femanager.git"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "In2code\\Femanagerextended\\": "Classes"

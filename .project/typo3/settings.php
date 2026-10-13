@@ -42,9 +42,7 @@ return [
         'femanager' => [
             'disableLog' => '0',
             'disableModule' => '0',
-            'enableConfirmationModule' => '0',
             'overrideFeUserCountryFieldWithSelect' => '0',
-            'useFluidMail' => '0',
         ],
     ],
     'FE' => [
@@ -57,8 +55,6 @@ return [
     ],
     'GFX' => [
         'processor' => 'GraphicsMagick',
-        'processor_allowTemporaryMasksAsPng' => false,
-        'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
         'processor_path' => '/usr/bin/',

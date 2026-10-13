@@ -1,0 +1,4 @@
+name: in2code/femanagerextended
+label: 'femanagerextended'
+dependencies:
+  - in2code/femanager
