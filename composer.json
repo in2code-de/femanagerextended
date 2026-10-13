@@ -24,17 +24,53 @@
   "require": {
     "in2code/femanager": "^8.0 || dev-main || dev-develop || dev-eap || dev-eap-v12"
   },
+  "require-dev": {
+    "helhum/typo3-console": "^8.1",
+    "typo3/cms-adminpanel": "^12.4",
+    "typo3/cms-backend": "^12.4",
+    "typo3/cms-belog": "^12.4",
+    "typo3/cms-beuser": "^12.4",
+    "typo3/cms-extbase": "^12.4",
+    "typo3/cms-extensionmanager": "^12.4",
+    "typo3/cms-felogin": "^12.4",
+    "typo3/cms-filelist": "^12.4",
+    "typo3/cms-fluid": "^12.4",
+    "typo3/cms-fluid-styled-content": "^12.4",
+    "typo3/cms-frontend": "^12.4",
+    "typo3/cms-info": "^12.4",
+    "typo3/cms-install": "^12.4",
+    "typo3/cms-lowlevel": "^12.4",
+    "typo3/cms-rte-ckeditor": "^12.4",
+    "typo3/cms-setup": "^12.4",
+    "typo3/cms-t3editor": "^12.4",
+    "typo3/cms-tstemplate": "^12.4"
+  },
   "autoload": {
     "psr-4": {
       "In2code\\Femanagerextended\\": "Classes"
     }
   },
+  "config": {
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
+    },
+    "bin-dir": ".Build/bin",
+    "policy": {
+      "advisories": {
+        "block": false
+      }
+    },
+    "vendor-dir": ".Build/vendor"
+  },
   "scripts": {
     "test:php:lint": "find *.php Classes Configuration Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
   },
+  "prefer-stable": true,
   "extra": {
     "typo3/cms": {
-      "extension-key": "femanagerextended"
+      "extension-key": "femanagerextended",
+      "web-dir": ".Build/public"
     }
   }
 }

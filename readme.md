@@ -18,5 +18,20 @@
 
 # Extension Development
 
-The best way to work on this extension is to use the Developmentenvironment of in2code/femanager.
-After starting up, you can simply install the extension with the command `ddev composer req --dev in2code/femanagerextended:@dev` and commit from the repository in the directory `packages/femanagerextended`
+The extension comes with its own local development environment based on [ddev](https://ddev.com/)
+(TYPO3 12 with femanager 8 and some test pages).
+
+## Requirements
+
+1. Install ddev, see: https://ddev.readthedocs.io/en/stable/#installation
+2. Install git-lfs, see: https://git-lfs.github.com/
+
+## Installation
+
+1. Clone this repository
+2. Run `ddev start`
+3. Run `ddev initialize` to setup configurations and test database
+4. Open https://femanagerextended.ddev.site/ (frontend) or https://femanagerextended.ddev.site/typo3/ (backend)
+
+The page https://femanagerextended.ddev.site/femanagerextended contains a registration form with the additional fields of
+this extension (twitterId, skypeId).

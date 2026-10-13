@@ -10,3 +10,8 @@ ehthumbs.db
 Thumbs.db
 .svn
 .sass-cache
+# Local development environment (ddev)
+.Build/
+/composer.lock
+/config
+/var
